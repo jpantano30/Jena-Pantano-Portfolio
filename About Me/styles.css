@@ -15,6 +15,51 @@ h1 {
     font-size: 50px;
     text-align: center;
 }
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    justify-content: space-around;
+}
+.image {
+    width: 70%;
+    background: rgb(107, 139, 107);
+    padding: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px rgb(195, 134, 134);
+}
+.imgs {
+    /* display: none; */
+    width: 100%;
+    border-radius: 30px;
+}
+.img img:first-of-type {
+    display: block;
+}
+.prevBtn, .nxtBtn {
+    align-items: center;
+    border: .5px solid black;
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 1px 1px ;
+}
+
+.prevBtn:hover {
+    cursor: w-resize;
+    background: black;
+    box-shadow: 3px 3px peachpuff;
+    color: white;
+}
+.nxtBtn:hover {
+    cursor: e-resize;
+    background: black;
+    box-shadow: 3px 3px peachpuff;
+    color: white;
+}
 
 footer {
     font-family: azote, serif;
