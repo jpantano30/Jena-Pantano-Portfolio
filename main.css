@@ -1,6 +1,8 @@
 
 
 nav {
+    border: 2px solid green;
+    height: 50px;
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
@@ -8,6 +10,11 @@ nav {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 h1 {
@@ -16,7 +23,19 @@ h1 {
     font-style: normal;
     font-size: 50px;
     text-align: center;
+    margin-top: 70px;
+    /* position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0; */
 }
+
+img {
+    width: auto;
+    height: 400px;
+    /* position: relative; */
+}
+
 footer {
     font-family: azote, serif;
     font-weight: 300;
