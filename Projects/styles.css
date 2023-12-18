@@ -20,6 +20,9 @@ footer {
     font-weight: 300;
     font-style: normal;
     font-size: 30px;
-    position: fixed center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
 }
