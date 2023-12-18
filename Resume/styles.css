@@ -1,0 +1,30 @@
+nav {
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+h1 {
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+}
+object {
+    width: 50%;
+    height: 1000px;
+    text-align: center;
+}
+
+footer {
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    position: fixed center;
+    text-align: center;
+}
