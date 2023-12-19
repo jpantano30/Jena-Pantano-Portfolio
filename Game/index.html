@@ -7,19 +7,59 @@
     <link rel="stylesheet" href="/Game/styles.css">
     <script src="/Game/app.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/yup8wvq.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rci4ryp.css">
 </head>
 <body>
-    <h1>TIC-TAC-TOE</h1>
-    <div class="grid-container"> 
-        <div class="grid-item" id="0">1</div>
-        <div class="grid-item" id="1">2</div>
-        <div class="grid-item" id="2">3</div>
-        <div class="grid-item" id="3">4</div>
-        <div class="grid-item" id="4">5</div>
-        <div class="grid-item" id="5">6</div>
-        <div class="grid-item" id="6">7</div>
-        <div class="grid-item" id="7">8</div>
-        <div class="grid-item" id="8">9</div>
+    <div class="modal-container" id="modal">
+        <div class="modal-textbox">
+                <h1>TIC-TAC-TOE</h1>
+                <p>Try and beat the computer in a fun game of Tic Tac Toe. Press the square to make your move. Choose 3 boxes in a row diagonally, horizontally, or vertically to win! </p>
+            <div id="username"> 
+                <label for="insrtname">Insert your player name:</label>
+                <input type="text" id="insrtname">
+            </div>
+            <button id="playGame" type="button"> PLAY GAME </button>
+            
+        </div>
     </div>
+   <h1 id="inputname"> name </h1>
+    <section class="scoreboard">
+        <header>
+            <h1>TIC-TAC-TOE</h1>
+        </header>
+        <ul>
+            <li id="wins">
+                <h4>WINS</h4>
+                <h1>0</h1>
+            </li>
+            <li id="ties">
+                <h4>TIES</h4>
+                <h1>0</h1>
+            </li>
+            <li id="losses">
+                <h4>LOSSES</h4>
+                <h1>0</h1>
+            </li>
+        </ul>
+    </section>
+
+    <section id="Game">
+        <h1>TIC-TAC-TOE</h1>
+        <div class="grid-container" id="grid-contain"> 
+            <div class="grid-item" id="0">0</div>
+            <div class="grid-item" id="1">1</div>
+            <div class="grid-item" id="2">2</div>
+            <div class="grid-item" id="3">3</div>
+            <div class="grid-item" id="4">4</div>
+            <div class="grid-item" id="5">5</div>
+            <div class="grid-item" id="6">6</div>
+            <div class="grid-item" id="7">7</div>
+            <div class="grid-item" id="8">8</div>
+        </div>
+    </section>
+    <section id="results">
+        <h1>YOU WIN!</h1>
+        <button id="restart">PLAY AGAIN</button>
+    </section>
 </body>
 </html>

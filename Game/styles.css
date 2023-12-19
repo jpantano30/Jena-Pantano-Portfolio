@@ -1,40 +1,168 @@
+:root {
+    --dark-peach: rgb(233, 139, 84);
+    --peach: rgb(244, 201, 176);
+    --light-peach: rgb(250, 240, 226);
+    --light-sage: rgb(187, 198, 176);
+    --dark-sage: rgb(112, 139, 85);
+}
 
-html {
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* html {
     height: 100%;
     width: 100%;
-} 
+}  */
 body {
-    background-color: black;
-    position: relative;
+    background-color: white;
+    position: fixed auto;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
-body > h1 {
+
+#modal {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.modal-textbox {
+    background-color: var(--peach);
+    border-radius: 20px;
+    border: 5px solid var(--light-sage);
+    height: 375px;
+    width: 550px;
+    margin: 150px auto;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(153, 172, 53);
+    font-size: 23px;
+    box-shadow: 30px 5px 5px var(--dark-peach);
+}
+.modal-textbox:hover {
+    box-shadow: 30px 5px 5px var(--dark-sage); 
+} 
+.modal-textbox > h1 {
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 85px;
+    margin-bottom: -10px;
+}
+
+#playGame {
+    background-color: var(--light-sage);
+    box-shadow: 10px 5px 5px var(--dark-peach);
+    border-radius: 15%;
+    border: 1px solid var(--light-sage);
+    height: 35px;
+    width: auto;
+    font-size: 25px;
+    margin-top: 15px;
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+}
+#playGame:hover {
+    background-color: rgb(233, 139, 84);
+    box-shadow: 10px 5px 5px var(--dark-sage);
+    cursor: pointer;
+}
+
+.scoreboard {
+    position: fixed auto;
+    border: 10px solid var(--light-sage);
+    background-color: var(--light-peach);
+    width: 110vh;
+    height: 40vh;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 12px;
+}
+.scoreboard > header {
+    align-self: center;
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 75px;
+    padding: 10px;
+} 
+.scoreboard > ul {
+    list-style-type: none;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    font-size: 40px;
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+}
+#wins {
+    border-radius: 5px;
+    border: 2px solid var(--light-sage);
+    background-color: var(--peach);
+    color: var(--light-sage);
+    text-align: center;
+    height: 220px;
+    width: 120px;
+   
+}
+#ties {
+    border-radius: 5px;
+    border: 2px solid var(--light-sage);
+    background-color: var(--peach);
+    color: var(--light-sage);
+    text-align: center;
+    height: 220px;
+    width: 120px;
+   
+}
+#losses {
+    border-radius: 5px;
+    border: 2px solid var(--light-sage);
+    background-color: var(--peach);
+    color: var(--light-sage);
+    text-align: center;
+    height: 220px;
+    width: 140px;
+}
+
+
+#Game > h1 {
     text-align: center;
     color: rgb(244, 201, 176);
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 80px;
-
 }
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     color: white;
-    padding: 30px;
     border-radius: 10px;
-    background-color: rgb(250, 240, 226);
-    margin: auto;
-    /* text-align: center; */
-
+    border: 50px solid rgb(250, 240, 226);
+    margin: 0px 500px 500px 500px;
 }
 .grid-item {
     background-color: rgb(187, 198, 176);
     border: 1px solid rgb(244, 201, 176);
     border-radius: 2px;
-    padding: 30px;
+    padding: 55px;
     font-size: 30px;
     text-align: center;
+    aspect-ratio: 1;
 }
