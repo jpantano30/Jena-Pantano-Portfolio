@@ -14,21 +14,24 @@
         <div class="modal-textbox">
                 <h1>TIC-TAC-TOE</h1>
                 <p>Try and beat the computer in a fun game of Tic Tac Toe. Press the square to make your move. Choose 3 boxes in a row diagonally, horizontally, or vertically to win! </p>
-            <div id="username"> 
-                <label for="insrtname">Insert your player name:</label>
-                <input type="text" id="insrtname">
+           <div id="username"> 
+                <label for="insrtname1">Player 1:</label>
+                <input type="text" id="insrtname1">
+                <br>
+                <label for="insrtname2">Player 2:</label>
+                <input type="text" id="insrtname2">
             </div>
             <button id="playGame" type="button"> PLAY GAME </button>
             
         </div>
     </div>
    <h1 id="inputname"> name </h1>
-    <section class="scoreboard">
+    <!-- <section class="scoreboard">
         <header>
-            <h1>TIC-TAC-TOE</h1>
+            <h1>TIC- <br> TAC- <br>TOE</h1>
         </header>
         <ul>
-            <li id="wins">
+            <li id="p1wins">
                 <h4>WINS</h4>
                 <h1>0</h1>
             </li>
@@ -36,29 +39,38 @@
                 <h4>TIES</h4>
                 <h1>0</h1>
             </li>
-            <li id="losses">
-                <h4>LOSSES</h4>
+        </ul>
+        <header>
+            <h1>TIC- <br> TAC- <br>TOE</h1>
+        </header>
+        <ul>
+            <li id="p2wins">
+                <h4>WINS</h4>
+                <h1>0</h1>
+            </li>
+            <li id="p2ties">
+                <h4>TIES</h4>
                 <h1>0</h1>
             </li>
         </ul>
-    </section>
+    </section> -->
 
     <section id="Game">
         <h1>TIC-TAC-TOE</h1>
-        <div class="grid-container" id="grid-contain"> 
-            <div class="grid-item" id="0">0</div>
-            <div class="grid-item" id="1">1</div>
-            <div class="grid-item" id="2">2</div>
-            <div class="grid-item" id="3">3</div>
-            <div class="grid-item" id="4">4</div>
-            <div class="grid-item" id="5">5</div>
-            <div class="grid-item" id="6">6</div>
-            <div class="grid-item" id="7">7</div>
-            <div class="grid-item" id="8">8</div>
+        <div class="grid-container" id="game-board"> 
+            <div class="grid-item" id="0"></div>
+            <div class="grid-item" id="1"></div>
+            <div class="grid-item" id="2"></div>
+            <div class="grid-item" id="3"></div>
+            <div class="grid-item" id="4"></div>
+            <div class="grid-item" id="5"></div>
+            <div class="grid-item" id="6"></div>
+            <div class="grid-item" id="7"></div>
+            <div class="grid-item" id="8"></div>
         </div>
     </section>
     <section id="results">
-        <h1>YOU WIN!</h1>
+        <p id="gameovermsg"></p>
         <button id="restart">PLAY AGAIN</button>
     </section>
 </body>
