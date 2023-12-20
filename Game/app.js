@@ -60,7 +60,10 @@ function init(){
     turn = 1;
     winner = null;
     render();
+    resMsg.innerText = ''
 };
+
+
 
 function handleClick(event){
     console.log(event.target) 
@@ -79,16 +82,16 @@ function render() {
     for (let i = 0; i < board.length; i++) {
             const sq = document.getElementById(i);
             sq.innerHTML = board[i] ? `${LOOKUP[board[i]]}` : '';
-    } 
+    };
     if (winner === 'Tie') {
         resMsg.innerText = "It's a tie";
         ties.innerText = `${tie}`;
-    }
+    };
     if (winner === 1 || winner === -1) {
-    resMsg.innerText = `${LOOKUP[winner]} Wins! Would you like to play again?`;
+    resMsg.innerText = `${LOOKUP[winner]} Wins!`;
     pOneWins.innerText = `${playerOneScore}`;
     pTwoWins.innerText = `${playerTwoScore}`;
-    }
+    };
 };
 function checkWinner (){
     for (let i = 0; i < winningCombos.length; i++){
