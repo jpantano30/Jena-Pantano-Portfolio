@@ -9,13 +9,13 @@
 /* *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 } */
-/* html {
+html {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-}  */
+} 
 body {
     background-color: white;
     /* position: fixed auto; */
@@ -23,8 +23,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     box-sizing: border-box;
 }
 
@@ -88,11 +88,11 @@ body {
     cursor: pointer;
 }
 
-/* .scoreboard {
+.scoreboard {
     border: 10px solid var(--light-sage);
     background-color: var(--light-peach);
-    width: 110vh;
-    height: 40vh;
+    width: auto;
+    height: 200px;
     padding: 20px;  
     border-radius: 20px;
     display: flex;
@@ -109,11 +109,13 @@ body {
 .scoreboard > ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
     font-size: 40px;
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 #p1wins {
     border-radius: 5px;
@@ -144,7 +146,7 @@ body {
     height: 220px;
     width: 140px;
     margin: 10px;
-}  */
+} 
 
 #game {
     display: flex;
@@ -186,6 +188,9 @@ body {
 
    
     /* font-size: 30px;
+    text-align: center; */
+
+}
+#results {
     text-align: center;
-    aspect-ratio: 1; */
 }
