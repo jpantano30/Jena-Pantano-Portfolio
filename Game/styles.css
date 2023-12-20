@@ -91,14 +91,14 @@ body {
 .scoreboard {
     border: 10px solid var(--light-sage);
     background-color: var(--light-peach);
-    width: auto;
+    width: 700px;
     height: 200px;
     padding: 20px;  
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    
 }
 .scoreboard > header {
     font-family: "azote", serif;
@@ -116,6 +116,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    height: 190px;
 }
 #p1wins {
     border-radius: 5px;
@@ -123,19 +124,26 @@ body {
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    height: 220px;
-    width: 120px;
+    height: 150px;
+    width: 125px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #ties {
     border-radius: 5px;
     border: 2px solid var(--light-sage);
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    height: 220px;
-    width: 120px;
+    height: 150px;
+    width: 125px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #p2wins {
     border-radius: 5px;
@@ -143,9 +151,12 @@ body {
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    height: 220px;
-    width: 140px;
+    height: 150px;
+    width: 125px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 #game {
@@ -160,6 +171,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 80px;
+    margin-bottom: -10px;
 }
 .grid-container {
     display: grid;
@@ -193,4 +205,32 @@ body {
 }
 #results {
     text-align: center;
+}
+#gameovermsg {
+    text-align: center;
+    color: var(--dark-peach);
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: -10px;
+}
+#restart {
+    background-color: var(--light-sage);
+    box-shadow: 10px 5px 5px var(--dark-peach);
+    border-radius: 15%;
+    border: 1px solid var(--light-sage);
+    height: 35px;
+    width: auto;
+    font-size: 25px;
+    margin-top: 15px;
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 10px;
+    }
+#restart:hover {
+    background-color: rgb(233, 139, 84);
+    box-shadow: 10px 5px 5px var(--dark-sage);
+    cursor: pointer;
 }
