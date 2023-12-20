@@ -11,6 +11,8 @@ const pTwoWins = $('#p2wins h1');
 const resMsg = $(`#gameovermsg`);
 
 let players = document.getElementById('inputname');
+let playerOneName = document.getElementById('plone');
+let playerTwoName = document.getElementById('pltwo');
 const restart = document.getElementById('restart');
 
 const LOOKUP = {
@@ -40,9 +42,12 @@ const boardEl = document.getElementById('game-board')
 
 //event listeners 
 closeModal.addEventListener('click', () => {
-    players.innerText = `Player 1 = X: ${document.getElementById("insrtname1").value} vs.
+    players.innerText = `Player 1 = X: ${document.getElementById("insrtname1").value} 
+    vs.
     Player 2 = O: ${document.getElementById("insrtname2").value}`;
-    players.style.textAlign = 'center'
+    players.style.textAlign = 'center';
+    playerOneName.innerText = `${document.getElementById("insrtname1").value}`;
+    playerTwoName.innerText = `${document.getElementById("insrtname2").value}`;
     modal.style.display = 'none';
     });
 boardEl.addEventListener('click', handleClick);

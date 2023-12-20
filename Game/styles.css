@@ -72,7 +72,7 @@ body {
 #playGame {
     background-color: var(--light-sage);
     box-shadow: 10px 5px 5px var(--dark-peach);
-    border-radius: 15%;
+    border-radius: 10px;
     border: 1px solid var(--light-sage);
     height: 35px;
     width: auto;
@@ -117,6 +117,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 190px;
+    text-transform: uppercase;
+}
+li > h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #p1wins {
     border-radius: 5px;
@@ -218,7 +223,7 @@ body {
 #restart {
     background-color: var(--light-sage);
     box-shadow: 10px 5px 5px var(--dark-peach);
-    border-radius: 15%;
+    border-radius: 10px;
     border: 1px solid var(--light-sage);
     height: 35px;
     width: auto;
