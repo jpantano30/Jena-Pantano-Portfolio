@@ -1,5 +1,23 @@
+:root {
+    --dark-peach: rgb(233, 139, 84);
+    --peach: rgb(244, 201, 176);
+    --light-peach: rgb(250, 240, 226);
+    --light-sage: rgb(187, 198, 176);
+    --dark-sage: rgb(112, 139, 85);
+}
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--light-sage);
+}
+html {
+    height: 100%;
+    width: 100%;
+}
 nav {
-    border: 2px solid green;
+    border-bottom: 5px solid var(--dark-peach);
+    background-color: var(--dark-sage);
     height: 50px;
     font-family: azote, serif;
     font-weight: 300;
@@ -8,12 +26,23 @@ nav {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     text-align: center;
 }
+nav:hover {
+    background-color: var(--light-sage);
+}
+nav > a {
+    color: white;
+}
+nav > a:hover {
+    color: var(--dark-peach);
+    /* add animation: ; */
+ }
 
 h1 {
     font-family: "azote", serif;
@@ -22,6 +51,7 @@ h1 {
     font-size: 50px;
     text-align: center;
     margin-top: 70px;
+    color: var(--dark-sage)
 }
 .carousel-container {
     display: flex;
@@ -70,14 +100,30 @@ h1 {
 }
 
 footer {
+    background-color: var(--peach);
+    border-top: 5px solid var(--dark-sage);
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 30px;
+    font-size: 40px;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer:hover {
+    background-color: var(--light-peach);
+    color: white;
+}
+footer > a {
+    color: var(--dark-peach)
+}
+footer > a:hover {
+   color: var(--dark-sage);
+   /* add animation: ; */
 }
 
