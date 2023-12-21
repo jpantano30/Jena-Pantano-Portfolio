@@ -98,6 +98,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
 }
 .scoreboard > header {
@@ -118,11 +119,12 @@ body {
     align-items: center;
     height: 190px;
     text-transform: uppercase;
-    flex-direction: row;
 }
 li > h4 {
     margin-bottom: -50px;
+    text-overflow: ellipsis;
 }
+
 #p1wins {
     border-radius: 5px;
     border: 2px solid var(--light-sage);
