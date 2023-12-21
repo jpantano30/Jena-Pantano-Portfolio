@@ -33,9 +33,9 @@ const winningCombos = [
 let board;
 let turn;
 let winner;
-let playerOneScore = 0
-let playerTwoScore = 0
-let tie = 0
+let playerOneScore = 0;
+let playerTwoScore = 0;
+let tie = 0;
 
 const boardEl = document.getElementById('game-board')
 
