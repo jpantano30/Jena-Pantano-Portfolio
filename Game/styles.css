@@ -113,15 +113,15 @@ body {
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
-    text-align: center;
-    justify-content: center;
+    /* text-align: center;
+    justify-content: center; 
     align-items: center;
-    height: 190px;
+    height: 190px; */
     text-transform: uppercase;
+    flex-direction: row;
 }
 li > h4 {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-bottom: -50px;
 }
 #p1wins {
     border-radius: 5px;
@@ -135,7 +135,9 @@ li > h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
 
 #ties {
     border-radius: 5px;
@@ -149,6 +151,7 @@ li > h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 #p2wins {
     border-radius: 5px;
@@ -162,6 +165,7 @@ li > h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 } 
 
 #game {
