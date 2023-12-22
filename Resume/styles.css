@@ -5,60 +5,82 @@
     --light-sage: rgb(187, 198, 176);
     --dark-sage: rgb(112, 139, 85);
 }
-body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: var(--light-sage);
+*{
+    box-sizing: border-box; 
 }
-html {
+html{
     height: 100%;
     width: 100%;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  70px 100px 500px 10px 50px;
+    grid-template-areas:
+    "nav"
+    "title"
+    "resume"
+    "space"
+    "footer";
+    height: 100%;
+    width: 100%;
+    background-image: url(sagegreenbackgroundAbMe.jpg);
+    background-position: 40% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
 }
 nav {
     border-bottom: 5px solid var(--dark-peach);
-    background-color: var(--dark-sage);
-    height: 50px;
-    font-family: azote, serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 30px;
-    text-align: center;
+    background-color: rgb(168, 183, 150);
+    grid-area: nav; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
 }
+
 nav:hover {
-    background-color: var(--light-sage);
+    border-bottom: 5px solid var(--dark-sage);
 }
 nav > a {
     color: white;
 }
 nav > a:hover {
-    color: var(--dark-peach);
+    color: black;
     /* add animation: ; */
  }
-h1 {
+  
+h1 { 
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
+    color: var(--dark-sage);
+    background-color: rgba(255, 255, 255, 0.757);
+    border-radius: 10px;
+    border: 1px solid;
+ }
+ h1:hover {
+    background-color: rgba(250, 240, 226, 0.784);
+    border: 2px solid black;
+ }
+
+div{
+    grid-area: resume;
     text-align: center;
-    margin-top: 70px;
-    color: var(--dark-sage)
 }
 object {
-    width: 50%;
-    height: 60vh;
+    width: 70%;
+    height: 80%;
     text-align: center;
-}
-div{
-    text-align: center;
+    background-color: white;
 }
 .resumeBtn {
     margin-bottom: 10px;
@@ -83,19 +105,17 @@ div{
     box-shadow: 10px 5px 5px var(--dark-sage);
     cursor: pointer;
 }
-
-footer {
+.space {
+    grid-area: space; 
+}
+footer { 
+    grid-area: footer; 
     background-color: var(--peach);
     border-top: 5px solid var(--dark-sage);
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
     font-size: 40px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -111,4 +131,8 @@ footer > a:hover {
    color: var(--dark-sage);
    /* add animation: ; */
 }
-
+@media only screen and (min-width: 1024px){
+    nav {
+        font-size: 40px;
+    }
+}
