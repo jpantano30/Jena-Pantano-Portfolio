@@ -10,6 +10,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: var(--light-sage);
+    background-image: url() ;
 }
 html {
     height: 100%;

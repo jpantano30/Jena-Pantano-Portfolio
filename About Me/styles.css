@@ -5,97 +5,138 @@
     --light-sage: rgb(187, 198, 176);
     --dark-sage: rgb(112, 139, 85);
 }
-* {
+/* screen size max width of 380px */
+*{
     box-sizing: border-box;
 }
-body {
-    /* position: relative; */
-    height: 100%;
-    width: 100%; 
-    background-color: var(--light-sage);
-    margin: 0;
-}
-html {
-    height: 100%;
+body {  
+    display: grid;
+    grid-template-columns:  0.3fr 2.2fr 0.3fr;
+    grid-template-rows: 70px 100px auto auto 10px auto 50px;
+    grid-template-areas:
+    "nav nav nav"
+    "title title title"
+    ". PersonalBckgrd ."
+    ". EdBckgrd ."
+    ". space ."
+    "prev carousel nxt"
+    "footer footer footer"; 
     width: 100%;
-}
-nav {
+    height: 100%;
+    background-image: url(sagegreenbackgroundAbMe.jpg);
+    background-position: 40% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+nav { 
     border-bottom: 5px solid var(--dark-peach);
-    background-color: var(--dark-sage);
-    height: 50px;
-    font-family: azote, serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 30px;
-    text-align: center;
+    background-color: rgb(168, 183, 150);
+    grid-area: nav; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
+    margin-top: -7px;
+    margin-left: -7px;
 }
 nav:hover {
-    background-color: var(--light-sage);
+    border-bottom: 5px solid var(--dark-sage);
 }
 nav > a {
     color: white;
 }
 nav > a:hover {
-    color: var(--dark-peach);
+    color: black;
     /* add animation: ; */
  }
-
-h1 {
+  
+h1 { 
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
-    text-align: center;
-    margin-top: 70px;
-    color: var(--dark-sage)
-}
-.PersonalBckgrd {
+    color: var(--dark-sage);
+    background-color: rgba(255, 255, 255, 0.757);
+    border-radius: 10px;
+    border: 1px solid;
+ }
+ h1:hover {
+    background-color: rgba(250, 240, 226, 0.784);
+    border: 2px solid black;
+ }
+  
+.PersonalBckgrd { 
+    grid-area: PersonalBckgrd; 
     text-align: center;
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
     font-size: 30px;
+    border: 2px solid var(--dark-peach);
+    border-radius: 10px;
+    margin: 5px;
+    background-color: rgb(244, 201, 176);
+}
+.PersonalBckgrd > h2 {
+    margin-top: 10px;
+}
+.PersonalBckgrd > p {
+    margin-top: -30px;
+    font-size: 28px;
 }
 .EdBckgrd {
+    grid-area: EdBckgrd; 
     text-align: center;
-    
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
+    border: 2px solid var(--dark-peach);
+    border-radius: 10px;
+    margin: 5px;
+    background-color: rgb(244, 201, 176);
 }
-.container {
+
+.EdBckgrd > h2 {
+    margin-top: 10px;
+}
+.EdBckgrd > p {
+    margin-top: -30px;
+    font-size: 28px;
+}
+.space {
+    grid-area: space; 
+}
+.carousel-container { 
+    grid-area: carousel; 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
 }
-.carousel-container {
-    display: fixed;
-    justify-content: space-around;
+.images {
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    display: none;
     border: 10px solid rgb(107, 139, 107);
     border-radius: 30px;
     box-sizing: border-box;
-    box-shadow: 10px 10px 10px rgb(195, 134, 134);
+    box-shadow: 10px 10px 10px 3px var(--peach);
 }
-.carousel-container:hover {
-    border: 10px solid rgb(195, 134, 134);
+.images:hover {
+    border: 10px solid var(--peach);
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 10px 10px 10px 10px rgb(107, 139, 107);
 }
-.carousel-images {
-    width: 100%;
-}
-
-.images {
-    width: 100%;
-    border-radius: 10px;
-    display: none;
-}
-
 .images:first-of-type {
     display: block;
 }
@@ -107,18 +148,22 @@ h1 {
     font-size: 20px;
     padding: 10px;
     border-radius: 50px;
-    /* text-align: center; */
-    box-shadow: 3px 3px 3px 3px var(--dark-peach);
+    box-shadow: 3px 3px 3px var(--dark-peach);
+    z-index: 1;
+    height: auto;
+    width: auto;
+    align-self: center;
     z-index: 1;
 }
-.prev{
-    position: relative;
-    right: 710px; 
+.prev {
+    grid-area: prev; 
+    justify-self: end;
+
 }
 
 .nxt {
-    position: relative;
-    right: 30px;
+    grid-area: nxt;
+    justify-self: start;
 }
 
 .prev:hover {
@@ -134,21 +179,19 @@ h1 {
     color: var(--peach);
 }
 
-footer {
+footer { 
+    grid-area: footer; 
     background-color: var(--peach);
     border-top: 5px solid var(--dark-sage);
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
     font-size: 40px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: -7px;
+    margin-left: -7px;
 }
 footer:hover {
     background-color: var(--light-peach);
@@ -161,4 +204,37 @@ footer > a:hover {
    color: var(--dark-sage);
    /* add animation: ; */
 }
-
+@media only screen and (min-width: 768px) {
+    body {
+        grid-template-columns:  0.4fr 2.2fr 0.4fr;
+    }
+    .PersonalBckgrd > p {
+        font-size: 40px;
+    }
+    .EdBckgrd > p {
+        font-size: 40px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    nav {
+        font-size: 40px;
+    }
+    .PersonalBckgrd {
+        background-color: rgba(244, 201, 176, 0.744);
+    }
+    .PersonalBckgrd:hover {
+        background-color: rgb(244, 201, 176);
+    }
+    .PersonalBckgrd > h2 {
+        font-size: 60px;
+    }
+    .EdBckgrd {
+        background-color: rgba(244, 201, 176, 0.744);
+    }
+    .EdBckgrd:hover {
+        background-color: rgb(244, 201, 176);
+    }
+    .EdBckgrd > h2 {
+        font-size: 60px;
+    }
+}
