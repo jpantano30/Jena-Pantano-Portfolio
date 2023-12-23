@@ -8,29 +8,33 @@
 *{
     box-sizing: border-box; 
 }
-html{
+html, body {
     height: 100%;
-    width: 100%;
     margin: 0;
 }
 body {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:  70px 100px 500px auto 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  70px auto auto auto auto 700px 1fr .5fr 50px;
     grid-template-areas:
-    "nav"
-    "title"
-    "resume"
-    "space"
-    "footer";
+    "nav nav"
+    "title title"
+    "resumebtn resumebtn"
+    "name name"
+    "contact lookup"
+    "experince education"
+    "skills honors"
+    'lis lis'
+    "footer footer";
     height: 100%;
     width: 100%;
     background-image: url(sagegreenbackgroundAbMe.jpg);
-    background-position: 40% 60%;
-    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-repeat: repeat;
     background-size: cover;
     margin: 0;
 }
+
 nav {
     border-bottom: 5px solid var(--dark-peach);
     background-color: rgb(168, 183, 150);
@@ -47,15 +51,17 @@ nav {
 nav:hover {
     border-bottom: 5px solid var(--dark-sage);
 }
+
 nav > a {
     color: white;
 }
+
 nav > a:hover {
     color: black;
     /* add animation: ; */
- }
+}
   
-h1 { 
+.title { 
     grid-area: title;
     justify-self: center;
     align-self: center;
@@ -67,24 +73,25 @@ h1 {
     background-color: rgba(255, 255, 255, 0.757);
     border-radius: 10px;
     border: 1px solid;
+    margin: 10px;
  }
- h1:hover {
+ .title:hover {
     background-color: rgba(250, 240, 226, 0.784);
     border: 2px solid black;
  }
 
-div{
-    grid-area: resume;
+.res{
+    grid-area: resumebtn;
     text-align: center;
 }
-object {
+/* object {
     width: 80%;
-    height: 80%;
+    height: 100%;
     text-align: center;
     background-color: white;
-}
+} */
 .resumeBtn {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: var(--dark-sage);
     box-shadow: 10px 5px 5px var(--dark-peach);
     border-radius: 10px;
@@ -96,6 +103,7 @@ object {
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
+ 
 }
 .resumeBtn > a{
     text-decoration: none;
@@ -106,9 +114,140 @@ object {
     box-shadow: 10px 5px 5px var(--dark-sage);
     cursor: pointer;
 }
-.space {
-    grid-area: space; 
+.name {
+    grid-area: name;
+    justify-self: center;
+    align-self: center;
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: black;
+    border-radius: 4px;
 }
+.contact {
+    grid-area: contact;
+    text-align: center;
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    padding: 15px;
+    align-self: center;
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 0.757);
+}
+.contact > h4 {
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin: 0;
+}
+.contact > p {
+    margin: 3px;
+    font-family: "azote", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+}
+.lookup {
+    grid-area: lookup;
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    padding: 15px;
+}
+.lookup > p {
+    align-self: center;
+    justify-self: center;
+}
+.lookup > ul {
+    list-style-type: none;
+    margin-left: -30px;
+    /* align-self: center;
+    justify-self: center; */
+}
+.social {
+
+}
+
+.experince {
+    grid-area: experince;
+    background-color: rgba(255, 255, 255, 0.757);
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    width: 95%;
+    height: 98%;
+    overflow-y: scroll;
+    white-space: wrap;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.education {
+    grid-area: education;
+    background-color: rgba(255, 255, 255, 0.757);
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    width: 95%;
+    height: 98%;
+    overflow-y: scroll;
+    white-space: wrap;
+    padding: 5px;
+    font-size: 15px;
+}
+.skills-section {
+    grid-area: skills;
+    background-color: rgba(255, 255, 255, 0.757);
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    width: 95%;
+    height: 98%;
+    padding: 5px;
+    font-size: 15px;
+}
+.honors-awards {
+    grid-area: honors;
+    background-color: rgba(255, 255, 255, 0.757);
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    width: 95%;
+    height: 98%;
+    overflow-y: scroll;
+    white-space: wrap;
+    padding: 5px;
+    font-size: 15px;
+}
+.Lisc-cert {
+    grid-area: lis;
+    background-color: rgba(255, 255, 255, 0.757);
+    border: 3px solid var(--dark-peach);
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    width: 95%;
+    height: 98%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
 footer { 
     grid-area: footer; 
     background-color: var(--peach);
@@ -132,8 +271,44 @@ footer > a:hover {
    color: var(--dark-sage);
    /* add animation: ; */
 }
+@media only screen and (min-width: 768px) { 
+    nav {
+        font-size: 33px;
+    }
+    .contact > h4 {
+        font-size: 50px;
+    }
+    .contact > p {
+        font-size: 30px;
+    }
+    .lookup {
+        font-size: 40px;
+        padding: 10px;
+    }
+    .experince {
+        font-size: 20px;
+    }
+    .education {
+        font-size: 20px;
+    }
+    .skills-section {
+        font-size: 20px;
+    }
+    .honors-awards {
+        font-size: 20px;
+    }
+    .Lisc-cert {
+        font-size: 20px;
+    }
+
+
+}
 @media only screen and (min-width: 1024px){
+    
     nav {
         font-size: 40px;
+    }
+    .contact > h4 {
+        font-size: 55px;
     }
 }
