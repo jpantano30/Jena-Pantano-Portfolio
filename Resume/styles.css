@@ -4,6 +4,7 @@
     --light-peach: rgb(250, 240, 226);
     --light-sage: rgb(187, 198, 176);
     --dark-sage: rgb(112, 139, 85);
+    --dark-sage2: rgb(46, 57, 35)
 }
 *{
     box-sizing: border-box; 
@@ -134,6 +135,7 @@ nav > a:hover {
     align-self: center;
     justify-self: center;
     background-color: rgba(255, 255, 255, 0.757);
+    color: var(--dark-sage);
 }
 .contact > h4 {
     font-family: "azote", serif;
@@ -164,6 +166,7 @@ nav > a:hover {
     align-self: center;
     justify-self: center;
     padding: 15px;
+    color: var(--dark-sage);
 }
 .lookup > p {
     align-self: center;
@@ -192,6 +195,10 @@ nav > a:hover {
     white-space: wrap;
     padding: 5px;
     font-size: 15px;
+    color: var(--dark-sage2);
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .experince > h1, .education > h1, .skills-section > h1, .honors-awards > h1, .Lisc-cert > h1 {
     font-family: "azote", serif;
@@ -224,6 +231,10 @@ h4 {
     white-space: wrap;
     padding: 5px;
     font-size: 15px;
+    color: var(--dark-sage2);
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .skills-section {
     grid-area: skills;
@@ -236,6 +247,10 @@ h4 {
     height: 98%;
     padding: 5px;
     font-size: 15px;
+    color: var(--dark-sage2);
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .honors-awards {
     grid-area: honors;
@@ -248,8 +263,13 @@ h4 {
     height: 98%;
     overflow-y: scroll;
     white-space: wrap;
-    padding: 5px;
+    padding: 10px;
+    padding-left: 15px;
     font-size: 15px;
+    color: var(--dark-sage2);
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .Lisc-cert {
     grid-area: lis;
@@ -262,9 +282,15 @@ h4 {
     height: 98%;
     padding: 10px;
     font-size: 15px;
+    color: var(--dark-sage2);
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
 }
-
-
+.experince:hover, .education:hover, .skills-section:hover, .honors-awards:hover, .Lisc-cert:hover {
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(250, 240, 226);
+}
 footer { 
     grid-area: footer; 
     background-color: var(--peach);
@@ -289,6 +315,20 @@ footer > a:hover {
    /* add animation: ; */
 }
 @media only screen and (min-width: 768px) { 
+   body {
+    grid-template-columns: .25fr 1fr 1fr .25fr;
+    grid-template-rows:  70px auto auto auto auto 700px 1fr .5fr 50px;
+    grid-template-areas:
+    " nav nav nav nav "
+    " . title title  . "
+    " . resumebtn resumebtn . "
+    " . name name . "
+    " . contact lookup . "
+    " . experince education . "
+    " . skills honors . "
+    " . lis lis . "
+    " footer footer footer footer ";
+   }
     nav {
         font-size: 33px;
     }
