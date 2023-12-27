@@ -205,12 +205,16 @@ footer > a:hover {
     body {
         grid-template-columns:  0.4fr 2.2fr 0.4fr;
     }
+    nav {
+        font-size: 33px;
+    }
     .PersonalBckgrd > p {
         font-size: 40px;
     }
     .EdBckgrd > p {
         font-size: 40px;
     }
+  
 }
 @media only screen and (min-width: 1024px){
     nav {

@@ -193,6 +193,23 @@ nav > a:hover {
     padding: 5px;
     font-size: 15px;
 }
+.experince > h1, .education > h1, .skills-section > h1, .honors-awards > h1, .Lisc-cert > h1 {
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0;
+    /* font-size: ; */
+}
+h4 {
+    font-family: "azote", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    margin: 0;
+}
+.Lisc-cert > h4 {
+    margin: 10px;
+}
 
 .education {
     grid-area: education;
@@ -300,7 +317,9 @@ footer > a:hover {
     .Lisc-cert {
         font-size: 20px;
     }
-
+    h4 {
+        font-size: 30px;
+    }
 }
 @media only screen and (min-width: 1024px){
     

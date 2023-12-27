@@ -5,65 +5,110 @@
     --light-sage: rgb(187, 198, 176);
     --dark-sage: rgb(112, 139, 85);
 }
-body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: var(--light-sage);
-    background-image: url() ;
+*{
+    box-sizing: border-box;
 }
-html {
+html, body {
     height: 100%;
-    width: 100%;
+    margin: 0;
 }
-nav {
+body {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 100px auto auto 50px;
+    grid-template-areas:
+    "nav"
+    "title"
+    "img"
+    "txt"
+    "footer"; 
+    width: 100%;
+    height: 100%;
+    background-image: url(sagegreenbackgroundAbMe.jpg);
+    background-position: 50% 60%;
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 0;
+  }
+
+nav { 
     border-bottom: 5px solid var(--dark-peach);
-    background-color: var(--dark-sage);
-    height: 50px;
-    font-family: azote, serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 30px;
-    text-align: center;
+    background-color: rgb(168, 183, 150);
+    grid-area: nav; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
+    font-family: azote, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
 }
 nav:hover {
-    background-color: var(--light-sage);
+    border-bottom: 5px solid var(--dark-sage);
 }
 nav > a {
     color: white;
 }
 nav > a:hover {
-    color: var(--dark-peach);
+    color: black;
     /* add animation: ; */
  }
-
-h1 {
+ h1 { 
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
-    text-align: center;
-    margin-top: 70px;
-    /* position: fixed;
-    top: 50px;
-    left: 0;
-    right: 0; */
-    color: var(--dark-sage)
+    color: var(--dark-sage);
+    background-color: rgba(255, 255, 255, 0.757);
+    border-radius: 10px;
+    border: 1px solid;
+ }
+ h1:hover {
+    background-color: rgba(250, 240, 226, 0.784);
+    border: 2px solid black;
+ }
+
+.image {
+    grid-area: img; 
+    justify-self: center;
+    align-self: center;
+}
+.image > img {
+    width: 350px;
+    border: 5px solid var(--peach);
+    border-radius: 30px;
+}
+.image > img:hover {
+    border: 5px solid var(--peach);
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px rgb(107, 139, 107);
 }
 
-img {
+.textbox {
+    grid-area: txt; 
+    width: 80%;
     text-align: center;
-    width: auto;
-    height: 400px;
-    /* position: relative; */
+    border: 2px solid var(--dark-peach);
+    border-radius: 10px;
+    margin: 5px;
+    background-color: rgb(244, 201, 176);
+    justify-self: center;
+    align-self: center;
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.textbox > h1 {
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
 }
 
 footer { 
@@ -89,8 +134,29 @@ footer > a:hover {
    color: var(--dark-sage);
    /* add animation: ; */
 }
+@media only screen and (min-width: 620px){
+    nav {
+        font-size: 33px;
+    }
+    .image > img {
+        width: 400px;
+    }
+    .textbox {
+        height: 90%;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+}
 @media only screen and (min-width: 1024px){
     nav {
         font-size: 40px;
     }
+    .image > img {
+        width: 600px;
+    }
+    .textbox {
+        font-size: 40px;
+    }
+
 }

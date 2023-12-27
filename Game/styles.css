@@ -245,3 +245,16 @@ li > h4 {
     box-shadow: 10px 5px 5px var(--dark-sage);
     cursor: pointer;
 }
+@media only screen and (max-width: 375px) { 
+    .modal-textbox {
+        height: 50%;
+        width: 50%;
+    }
+    .scoreboard {
+
+    }
+    
+}
+@media only screen and (min-width: 1024px){
+
+}
