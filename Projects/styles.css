@@ -55,8 +55,8 @@ nav > a {
 nav > a:hover {
     color: black;
     /* add animation: ; */
-    }
- h1 { 
+}
+h1 { 
     grid-area: title;
     justify-self: center;
     align-self: center;
@@ -68,11 +68,11 @@ nav > a:hover {
     background-color: rgba(255, 255, 255, 0.757);
     border-radius: 10px;
     border: 1px solid;
- }
- h1:hover {
+}
+h1:hover {
     background-color: rgba(250, 240, 226, 0.784);
     border: 2px solid black;
- }
+}
 .projectLinks {
     grid-area: proj;
     display: flex;
@@ -81,6 +81,9 @@ nav > a:hover {
 }
 .tic-tac-toe {
     width:100%
+}
+.tic-tac-toe:hover {
+ /* add animation: ; */
 }
 .text-descritpions {
     grid-area: txt; 

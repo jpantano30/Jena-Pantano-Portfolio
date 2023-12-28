@@ -48,20 +48,16 @@ nav {
     font-style: normal;
     font-size: 28px;
 }
-
 nav:hover {
     border-bottom: 5px solid var(--dark-sage);
 }
-
 nav > a {
     color: white;
 }
-
 nav > a:hover {
     color: black;
     /* add animation: ; */
 }
-  
 .title { 
     grid-area: title;
     justify-self: center;
@@ -85,12 +81,6 @@ nav > a:hover {
     grid-area: resumebtn;
     text-align: center;
 }
-/* object {
-    width: 80%;
-    height: 100%;
-    text-align: center;
-    background-color: white;
-} */
 .resumeBtn {
     margin-bottom: 20px;
     background-color: var(--dark-sage);
@@ -175,13 +165,7 @@ nav > a:hover {
 .lookup > ul {
     list-style-type: none;
     margin-left: -30px;
-    /* align-self: center;
-    justify-self: center; */
 }
-/* .social {
-
-} */
-
 .experince {
     grid-area: experince;
     background-color: rgba(255, 255, 255, 0.757);
@@ -206,7 +190,6 @@ nav > a:hover {
     font-weight: 400;
     font-style: normal;
     margin-bottom: 0;
-    /* font-size: ; */
 }
 h4 {
     font-family: "azote", serif;
@@ -289,7 +272,6 @@ h4 {
     font-style: normal;
 }
 .experince:hover, .education:hover, .skills-section:hover, .honors-awards:hover, .Lisc-cert:hover {
-    /* background-color: rgb(255, 255, 255); */
     background-color: rgb(250, 240, 226);
 }
 footer { 
