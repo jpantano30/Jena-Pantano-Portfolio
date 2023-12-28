@@ -5,29 +5,18 @@
     --light-sage: rgb(187, 198, 176);
     --dark-sage: rgb(112, 139, 85);
 }
-
 *{
     box-sizing: border-box; 
 }
-
-/* html {
+html, body {
     height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-}  */
+    margin: 0;
+}
 body {
     background-color: white;
-    /* position: fixed auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%; */
-    box-sizing: border-box;
     display: grid;
     grid-template-columns:  0.3fr 1fr 1fr 1fr 0.3fr;
-    grid-template-rows: 150px 200px 100px auto 50px;
+    grid-template-rows: auto 200px 80px auto 50px;
     grid-template-areas:
     " . . name . . "
     " . scoreboard scoreboard scoreboard . "
@@ -37,7 +26,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
 #modal {
     background-color: white;
     position: fixed;
@@ -52,14 +40,16 @@ body {
     border-radius: 20px;
     border: 5px solid var(--light-sage);
     height: 375px;
-    width: 550px;
-    margin: 150px auto;
+    width: 300px;
     padding: 10px;
     text-align: center;
     justify-content: center;
     color: rgb(153, 172, 53);
     font-size: 23px;
     box-shadow: 30px 5px 5px var(--dark-peach);
+    position: fixed;
+    top: 10%;
+    left: 10%;
 }
 .modal-textbox:hover {
     box-shadow: 30px 5px 5px var(--dark-sage); 
@@ -68,7 +58,6 @@ body {
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 85px;
     margin-bottom: -10px;
 }
 #inputname {
@@ -77,9 +66,8 @@ body {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 28px;
 }
-
 #playGame {
     background-color: var(--light-sage);
     box-shadow: 10px 5px 5px var(--dark-peach);
@@ -98,121 +86,109 @@ body {
     box-shadow: 10px 5px 5px var(--dark-sage);
     cursor: pointer;
 }
-
 .scoreboard {
     grid-area: scoreboard;
+    align-content: center;
+    justify-self: center;
     border: 10px solid var(--light-sage);
     background-color: var(--light-peach);
-    /* width: 700px;
-    height: 200px;
-    padding: 20px;   */
     border-radius: 20px;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
-    
+    display: grid;
+    grid-template-columns: 50px .125fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "ttt . p1wins tie  p2wins"; 
+    width: 100%;
+    height: 90%;
+    align-self: center;
 }
 .scoreboard > header {
+    grid-area: ttt;
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 55px;
+    font-size: 18px;
+    justify-self: center;
+    align-self: center;
+    padding-left: 5px;
 } 
-.scoreboard > ul {
-    list-style-type: none;
-    display: flex;
-    font-size: 40px;
+.scoreboard > div {
+    font-size: 18px;
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
     text-align: center;
-    justify-content: center; 
     align-items: center;
-    height: 190px;
     text-transform: uppercase;
+    overflow: scroll;
+    word-wrap: break-word;
+    align-items: baseline;
 }
-li > h4 {
-    margin-bottom: -50px;
-    text-overflow: ellipsis;
+div > h4 {
+    margin-bottom: -15px;
 }
-
 #p1wins {
+    grid-area: p1wins;
     border-radius: 5px;
     border: 2px solid var(--light-sage);
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    /* height: 150px;
-    width: 125px;
-    margin: 10px; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    height: 60%;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
 }
-
-
 #ties {
+    grid-area: tie;
     border-radius: 5px;
     border: 2px solid var(--light-sage);
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    /* height: 150px;
-    width: 125px;
-    margin: 10px; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    height: 60%;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
 }
 #p2wins {
+    grid-area: p2wins;
     border-radius: 5px;
     border: 2px solid var(--light-sage);
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    /* height: 150px;
-    width: 125px; */
-    /* margin: 10px; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    height: 60%;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
 } 
-
-#game {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-} 
-#Game > h1 {
+.game {
     grid-area: gameh1;
     text-align: center;
     color: rgb(244, 201, 176);
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 80px;
-    /* margin-bottom: -10px; */
+    font-size: 30px;
+    align-self: center;
 }
 .board-grid {
     grid-area: board;
+    align-self: center;
+    justify-self: center;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 450px;
-    width: 450px;
+    grid-template-columns: 71px 71px 71px;
+    grid-template-rows: 71px 71px 71px;
+    height: fit-content;
+    width: fit-content;
     color: white;
     border-radius: 10px;
     border: 50px solid rgb(250, 240, 226);
 }
 .grid-item {
-    height: 150px;
-    width: 150px;
     background-color: rgb(187, 198, 176);
     border: 1px solid rgb(244, 201, 176);
     border-radius: 2px;
@@ -223,12 +199,6 @@ li > h4 {
     font-weight: 400;
     font-style: normal;
     font-size: 80px;
-
-
-   
-    /* font-size: 30px;
-    text-align: center; */
-
 }
 #results {
     text-align: center;
@@ -240,8 +210,8 @@ li > h4 {
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 40px;
-    margin-bottom: -10px;
+    font-size: 30px;
+    margin: 0;
 }
 #restart {
     background-color: var(--light-sage);
@@ -250,29 +220,112 @@ li > h4 {
     border: 1px solid var(--light-sage);
     height: 35px;
     width: auto;
-    font-size: 25px;
-    margin-top: 15px;
+    font-size: 15px;
     font-family: azote, serif;
     font-weight: 300;
     font-style: normal;
-    margin-bottom: 10px;
+    margin: 10px;
     }
 #restart:hover {
     background-color: rgb(233, 139, 84);
     box-shadow: 10px 5px 5px var(--dark-sage);
     cursor: pointer;
 }
-@media only screen and (max-width: 380px) { 
-    .modal-textbox {
-        height: 50%;
-        width: 50%;
+@media only screen and (min-width: 600px) { 
+    body {
+        grid-template-rows: auto 225px 80px auto 50px;
     }
-    /* .scoreboard {
-        width: 375px;
-
-    } */
-    
+    .modal-textbox {
+        height: 375px;
+        width: 400px;
+        font-size: 23px;
+        position: relative;
+        top: 20%;
+        left: 20%;
+    }
+    #inputname {
+        font-size: 50px;
+    }
+    .scoreboard > header {
+        font-size: 28px;
+        margin-left: 30px;
+    } 
+    .scoreboard > div {
+        font-size: 30px;
+    }
+    div > h4 {
+        margin-bottom: -20px;
+    }
+    #p1wins {
+        height: 80%;
+        width: 80%;
+        overflow: hidden;
+    }
+    #ties {
+        height: 80%;
+        width: 80%;
+        overflow: hidden;
+    }
+    #p2wins {
+        height: 80%;
+        width: 80%;
+        overflow: hidden;
+    } 
+    .game {
+        font-size: 60px;
+    }
+    .grid-container {
+        grid-template-columns: 90px 90px 90px;
+        grid-template-rows: 90px 90px 90px;
+    }
+    #gameovermsg {
+        font-size: 40px;
+    }
+    #restart {
+        font-size: 20px;
+    }
 }
-@media only screen and (min-width: 1024px){
-
+@media only screen and (min-width: 930px){
+    .modal-textbox {
+        height: 375px;
+        width: 550px;
+        margin: 150px auto;
+        padding: 10px;
+        position: fixed;
+        top: 10%;
+        left: 30%;
+    }
+    .modal-textbox > h1 {
+        font-size: 85px;
+        margin-bottom: -10px;
+    }
+    .scoreboard {
+        width: 700px;
+        height: 200px;
+        padding: 20px;  
+        display: flex;
+        justify-content: space-between;
+    }
+    .scoreboard > header {
+        font-size: 40px;
+    } 
+    #p1wins {
+        height: 150px;
+        width: 125px;
+        margin: 10px;
+    }
+    #ties {
+        height: 150px;
+        width: 125px;
+        margin: 10px;
+    }
+    #p2wins {
+        height: 150px;
+        width: 125px;
+        margin: 10px;
+    } 
+    .grid-container {
+        grid-template-columns: 120px 120px 120px;
+        grid-template-rows: 120px 120px 120px;
+    }
 }
