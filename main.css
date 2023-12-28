@@ -144,9 +144,11 @@ footer > a:hover {
     .textbox {
         height: 90%;
         margin-bottom: 20px;
-        font-size: 30px;
+        font-size: 25px;
     }
-
+    .textbox > h2 {
+        margin-bottom: -10px;
+    }
 }
 @media only screen and (min-width: 1024px){
     nav {

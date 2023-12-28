@@ -6,26 +6,36 @@
     --dark-sage: rgb(112, 139, 85);
 }
 
-/* *{
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box; 
-} */
-html {
+}
+
+/* html {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-} 
+}  */
 body {
     background-color: white;
-    /* position: fixed auto; */
+    /* position: fixed auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 100%;
+    height: 100%;
     width: 100%; */
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns:  0.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 150px 200px 100px auto 50px;
+    grid-template-areas:
+    " . . name . . "
+    " . scoreboard scoreboard scoreboard . "
+    " . gameh1 gameh1 gameh1 . "
+    " . board board board . "
+    " . . playagain . . "; 
+    width: 100%;
+    height: 100%;
 }
 
 #modal {
@@ -62,6 +72,7 @@ body {
     margin-bottom: -10px;
 }
 #inputname {
+    grid-area: name;
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
@@ -89,16 +100,17 @@ body {
 }
 
 .scoreboard {
+    grid-area: scoreboard;
     border: 10px solid var(--light-sage);
     background-color: var(--light-peach);
-    width: 700px;
+    /* width: 700px;
     height: 200px;
-    padding: 20px;  
+    padding: 20px;   */
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; */
     
 }
 .scoreboard > header {
@@ -131,13 +143,13 @@ li > h4 {
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    height: 150px;
+    /* height: 150px;
     width: 125px;
-    margin: 10px;
-    display: flex;
+    margin: 10px; */
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 
@@ -147,13 +159,13 @@ li > h4 {
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    height: 150px;
+    /* height: 150px;
     width: 125px;
-    margin: 10px;
-    display: flex;
+    margin: 10px; */
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 #p2wins {
     border-radius: 5px;
@@ -161,28 +173,32 @@ li > h4 {
     background-color: var(--peach);
     color: var(--light-sage);
     text-align: center;
-    height: 150px;
-    width: 125px;
-    margin: 10px;
-    display: flex;
+    /* height: 150px;
+    width: 125px; */
+    /* margin: 10px; */
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 } 
 
 #game {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 } 
 #Game > h1 {
+    grid-area: gameh1;
     text-align: center;
     color: rgb(244, 201, 176);
     font-family: "azote", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 80px;
-    margin-bottom: -10px;
+    /* margin-bottom: -10px; */
+}
+.board-grid {
+    grid-area: board;
 }
 .grid-container {
     display: grid;
@@ -216,6 +232,7 @@ li > h4 {
 }
 #results {
     text-align: center;
+    grid-area: playagain;
 }
 #gameovermsg {
     text-align: center;
@@ -245,14 +262,15 @@ li > h4 {
     box-shadow: 10px 5px 5px var(--dark-sage);
     cursor: pointer;
 }
-@media only screen and (max-width: 375px) { 
+@media only screen and (max-width: 380px) { 
     .modal-textbox {
         height: 50%;
         width: 50%;
     }
-    .scoreboard {
+    /* .scoreboard {
+        width: 375px;
 
-    }
+    } */
     
 }
 @media only screen and (min-width: 1024px){
