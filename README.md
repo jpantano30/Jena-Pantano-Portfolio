@@ -1,5 +1,31 @@
-# Jena-Pantano-Portfolio
-<a href="https://jpantano30.github.io/Jena-Pantano-Portfolio/"> Jena Pantano's Portfolio</a>
+# Jena Pantano's Portfolio
+<div align="center">
+<a href="https://jpantano30.github.io/Jena-Pantano-Portfolio/"><img src="homepage.jpg" height="400"></a>
+</div>
+
+### Click the image above to be directed to the home page. [point up] (:point_up_2:)
+:point_up_2:
+
+
+
+
+# Jena Pantano's Portfolio 
+======
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
 
 <ol>
  <li> An embedded screenshot of the app </li>
