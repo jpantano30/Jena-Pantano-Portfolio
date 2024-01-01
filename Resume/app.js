@@ -24,3 +24,16 @@ instagram.addEventListener('mouseenter', () => {
 instagram.addEventListener('mouseleave', () => {
     social.innerText = ''
 })
+
+// const cards = document.querySelectorAll(".card");
+
+// function flip() {
+//     this.classList.toggle('flip');
+// }
+// cards.forEach((card) => card.addEventListener("click", flip));
+
+var card = document.querySelector('.card');
+card.addEventListener('click', function() 
+{
+  card.classList.toggle('flipped');
+});
