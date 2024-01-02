@@ -3,37 +3,109 @@
 <a href="https://jpantano30.github.io/Jena-Pantano-Portfolio/"><img src="homepage.jpg" height="400"></a>
 </div>
 
-### Click the image above to be directed to the home page. [point up] (:point_up_2:)
-:point_up_2:
+<div align="center">
+Click the image above to be directed to the home page. :point_up_2:
+</div>
 
+#
 
+# Description: 
+Above you can find a link to my porfolio page where you can view information about me, my resume, projects I've completed, and links to my other accounts. 
 
+#
 
-# Jena Pantano's Portfolio 
-======
+<details> 
+<summary>Instructions:</summary>
+▶️ In order to navigate to my portfolio page, click on the Welcome page image above. 
+ <br>
+▶️ To play Tic-Tac-Toe, navigate to the projects section in the navigation bar and click on the image in the center of the page. 
+ <br>
+▶️ To download my resume, navigate to resume page and click the download button. 
+</details>
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+<details> 
+<summary> User Stories:</summary>
+ <ul> 
+  <li> As a friend of Jena Pantano, I want to view her portfolio so that I can see the work she has done during her time at general assembly.</li>
+  <li> As a potential employer, I want to view Jena's projects, her resume, and look at how her portfolio was designed, so that I can assess whether she is a good fit for the company.</li>
+ </ul>
+</details>
 
-Alternatively, for H1 and H2, an underline-ish style:
+<details>
+ <summary> :art: Wire Frame </summary>
+   <details> 
+    <summary> ✏️ Rough Sketch </summary>
+     <img src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/40d645dc-8eb8-45a0-aef4-e22034c0cde6">
+   </details>
+</details>
 
-Alt-H1
-======
+<details> 
+ <summary> 🎮 Game </summary>
+ <div align="center">
+ <img width="432" alt="gameMod" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/f9153952-42a0-40a3-adad-5737be8d462e">
+ </div>
+ <br>
+ <div align="center">
+ <img width="286" alt="game" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/6c7071bb-3c8c-413e-9aed-b61f498b2c0a">
+ </div>
+</details>
 
-Alt-H2
-------
+<details>
+ <summary> 💻 Portfolio </summary>
+ <h3 align="center"> Home Page </h3>
+<div align="center">
+<img width="682" alt="Home-welcomeSS" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/acffd32a-c75c-4d93-96a8-a55b28f3c872">
+</div>
+<h3 align="center"> About Me </h3>
+<div align="center">
+<img width="897" alt="AboutmeSS" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/f0daf379-c000-4267-99ca-ae785169d2ba"> 
+</div>
+<h3 align="center"> Resume </h3>
+<div align="center">
+<img width="1033" alt="resumeSS" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/3a7af396-6397-4b2c-b737-4c2875d13311">
+</div>
+<h3 align="center"> Projects </h3>
+<div align="center">
+<img width="506" alt="ProjectsSS" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/73407d2e-266f-45d1-9fa2-eb07db313ce9">
+</div>
+</details>
 
-<ol>
- <li> An embedded screenshot of the app </li>
- <li>List of the technologies used</li>
- <li>Installation instructions </li>
- <li>Your user stories – who are your users, what do they want and why?</li>
- <li>Screenshots of the application to let users know what to expect</li>
- <li>Descriptions of any unsolved problems or major hurdles you had to overcome</li>
- <li>Descriptions of next steps you have planned for your application</li>
- </ol>
- 
+<details> 
+ <summary> Challenges </summary>
+ Descriptions of any unsolved problems or major hurdles that were overcome. 
+ <ul>
+  <li> The images in the carousel are different sizes and I would like to have them all be the same size without having the image being changed.</li>
+  <li> One challenge I overcame was formatting the whole website to be responsive especially, the Tic-Tac-Toe game. I changed the pages to use CSS grid and some flexbox. </li>
+  <li> The formatting of the carousel was a challenge for me. I had trouble with the placement of the previous and next buttons. </li>
+  <li> Challenges with formatting the scoreboard in Tic-Tac-Toe. </li>
+ </ul>
+</details>
+
+<details> 
+ <summary> ❓ Future Features </summary>
+  Next steps planned: 
+ <ul>
+  <li> Fixes to above unsolved problems. </li>
+  <li> Add a flip feature to the resume boxes. </li>
+  <li> Add captions on hover to the carousel on the about me page. </li>
+  <li> Add play against the computer feature in Tic-Tac-Toe. </li>
+  <li> Add CSS transitions and animations. </li>
+  <li> Create a cake decorating game. </li>
+ </ul>
+</details>
+
+#
+
+### Deployed Link 🔗
+<a href="https://jpantano30.github.io/Jena-Pantano-Portfolio/"> Jena Pantano's Portfolio </a> 
+
+#
+
+## Technologies used: 👩‍💻
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
