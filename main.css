@@ -51,7 +51,6 @@ nav > a {
 }
 nav > a:hover {
     color: black;
-    /* add animation: ; */
  }
  h1 { 
     grid-area: title;
@@ -132,7 +131,6 @@ footer > a {
 }
 footer > a:hover {
    color: var(--dark-sage);
-   /* add animation: ; */
 }
 @media only screen and (min-width: 620px){
     nav {

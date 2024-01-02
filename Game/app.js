@@ -1,4 +1,4 @@
-//constants
+
 function $(cssSelector) {
     return document.querySelector(cssSelector)
 };
@@ -39,8 +39,6 @@ let tie = 0;
 
 const boardEl = document.getElementById('game-board')
 
-
-//event listeners 
 closeModal.addEventListener('click', () => {
     players.innerText = `Player 1 = X: ${document.getElementById("insrtname1").value} 
     vs.
@@ -53,7 +51,6 @@ closeModal.addEventListener('click', () => {
 boardEl.addEventListener('click', handleClick);
 restart.addEventListener('click', init);
 
-//functions 
 init();
 function init(){
     board = [null, null, null, null, null, null, null, null, null];
@@ -66,19 +63,13 @@ function init(){
 
 
 function handleClick(event){
-    console.log(event.target) 
-    //another player cant make changes to box thats already been clicked 
     if (board[parseInt(event.target.id)] || winner) return;
-    //next players turn 
     board[parseInt(event.target.id)] = turn;
     turn *= -1;
-    console.log(board);
     winner = checkWinner();
     render()
 };
 function render() {
-    //if anything in board thats changed, i want to render the box
-    //subfunctions - updatefunction
     for (let i = 0; i < board.length; i++) {
             const sq = document.getElementById(i);
             sq.innerHTML = board[i] ? `${LOOKUP[board[i]]}` : '';

@@ -54,7 +54,6 @@ nav > a {
 }
 nav > a:hover {
     color: black;
-    /* add animation: ; */
 }
 h1 { 
     grid-area: title;
@@ -81,9 +80,6 @@ h1:hover {
 }
 .tic-tac-toe {
     width:100%
-}
-.tic-tac-toe:hover {
- /* add animation: ; */
 }
 .text-descritpions {
     grid-area: txt; 
@@ -115,7 +111,6 @@ footer > a {
 }
 footer > a:hover {
    color: var(--dark-sage);
-   /* add animation: ; */
 }
 @media only screen and (min-width: 768px){
     nav {
