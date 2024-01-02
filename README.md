@@ -16,11 +16,11 @@ Above you can find a link to my porfolio page where you can view information abo
 
 <details> 
 <summary>Instructions:</summary>
-▶️ In order to navigate to my portfolio page, click on the Welcome page image above. 
+👉 In order to navigate to my portfolio page, click on the Welcome page image above. 
  <br>
-▶️ To play Tic-Tac-Toe, navigate to the projects section in the navigation bar and click on the image in the center of the page. 
+👉 To play Tic-Tac-Toe, navigate to the projects section in the navigation bar and click on the image in the center of the page. 
  <br>
-▶️ To download my resume, navigate to resume page and click the download button. 
+👉 To download my resume, navigate to resume page and click the download button. 
 </details>
 
 <details> 
@@ -32,7 +32,7 @@ Above you can find a link to my porfolio page where you can view information abo
 </details>
 
 <details>
- <summary> :art: Wire Frame </summary>
+ <summary> 🎨 Wire Frame </summary>
    <details> 
     <summary> ✏️ Rough Sketch </summary>
      <img src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/40d645dc-8eb8-45a0-aef4-e22034c0cde6">
@@ -59,6 +59,13 @@ Above you can find a link to my porfolio page where you can view information abo
 <h3 align="center"> About Me </h3>
 <div align="center">
 <img width="897" alt="AboutmeSS" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/f0daf379-c000-4267-99ca-ae785169d2ba"> 
+</div>
+<h3 align="center"> Carousel </h3>
+<div align="center"> 
+<img width="1154" alt="carme" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/0aecdaec-d38d-4c34-abf7-f114b8af7802">
+</div>
+<div align="center"> 
+<img width="445" alt="carcake" src="https://github.com/jpantano30/Jena-Pantano-Portfolio/assets/147424951/d0c49e1e-a67a-4e71-a66f-894210ebec28">
 </div>
 <h3 align="center"> Resume </h3>
 <div align="center">
