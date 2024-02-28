@@ -77,16 +77,10 @@ Above you can find a link to my porfolio page where you can view information abo
 </div>
 </details>
 
-<details> 
- <summary> Challenges </summary>
- Descriptions of any unsolved problems or major hurdles that were overcome. 
- <ul>
-  <li> The images in the carousel are different sizes and I would like to have them all be the same size without having the image being changed.</li>
-  <li> One challenge I overcame was formatting the whole website to be responsive especially, the Tic-Tac-Toe game. I changed the pages to use CSS grid and some flexbox. </li>
-  <li> The formatting of the carousel was a challenge for me. I had trouble with the placement of the previous and next buttons. </li>
-  <li> Challenges with formatting the scoreboard in Tic-Tac-Toe. </li>
- </ul>
-</details>
+
+
+
+
 
 <details> 
  <summary> ❓ Future Features </summary>

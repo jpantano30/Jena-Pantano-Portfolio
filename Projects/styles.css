@@ -19,6 +19,7 @@ body {
     grid-template-areas:
     "nav"
     "title"
+    "directions"
     "proj"
     "txt"
     "space"
@@ -72,15 +73,42 @@ h1:hover {
     background-color: rgba(250, 240, 226, 0.784);
     border: 2px solid black;
 }
+#directions {
+    grid-area: directions;
+    justify-self: center;
+    align-self: center;
+    font-family: "azote", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: darkgreen;
+    background-color: rgba(255, 218, 185, 0.618);
+    border-radius: 10px;
+    padding: 5px;
+}
+#directions:hover {
+    background-color: rgba(250, 240, 226, 0.784);
+    box-shadow: 10px 5px 10px rgb(252, 224, 176);
+}
 .projectLinks {
     grid-area: proj;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
 }
-.tic-tac-toe {
-    width:100%
+.projects {
+    width:100%;
+    border-radius: 20%;
+    padding: 5px;
 }
+#cooking:hover {
+    box-shadow: 10px 10px 10px rgb(252, 224, 176);
+}
+#ticTac:hover {
+    box-shadow: 10px 10px 10px rgb(252, 224, 176);
+}
+
 .text-descritpions {
     grid-area: txt; 
 }
